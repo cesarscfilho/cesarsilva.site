@@ -1,4 +1,5 @@
 import { Github, Twitter } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -11,8 +12,12 @@ export default function Home() {
           </h1>
           <p>I like to learn new technologies and create applications.</p>
           <div className="flex gap-4">
-            <Github />
-            <Twitter />
+            <Link target="_blank" href="https://github.com/cesarsdcf">
+              <Github className="w-5 h-5" />
+            </Link>
+            <Link target="_blank" href="https://twitter.com/cesardotdev">
+              <Twitter className="w-5 h-5 " />
+            </Link>
           </div>
         </div>
       </div>
