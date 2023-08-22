@@ -32,64 +32,62 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="relative my-6">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent to-white"></div>
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-white to-transparent"></div>
-        <div className="border-t border-dashed border-gray-800"></div>
+      <div className="relative my-6 bg-transparent">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent to-gray-50" />
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-gray-50 to-transparent" />
+        <div className="border-t  border-gray-800" />
       </div>
-      <div>
-        <section>
-          <h2 className="text-xl font-medium mb-1">Projects</h2>
-          <ul className="md:grid md:grid-cols-2 gap-4 flex flex-col mt-3">
-            <li className="rounded-md border bg-gray-50 border-gray-300 list-none hover:bg-gradient-to-r from-blue-300 to-blue-600 p-[2px]">
-              <div className="p-6 hover:border-gray-400 bg-gray-50 rounded-sm h-full">
-                <div className="flex flex-col justify-between h-full">
-                  <div>
-                    <h4 className="text-lg font-medium">Lorem Ipsum</h4>
-                    <p className="line-clamp-2">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Autem ratione, ipsam odio dolores atque ducimus harum eos
-                      qui tenetur delectus, aspernatur ab
-                    </p>
+      <section>
+        <h2 className="text-xl font-medium mb-1">Projects</h2>
+        <ul className="md:grid md:grid-cols-2 gap-4 flex flex-col mt-3">
+          <li className="rounded-md border bg-white border-gray-300 list-none hover:bg-gradient-to-r from-blue-300 to-blue-600 p-[2px]">
+            <div className="p-6 hover:border-gray-400 bg-white rounded-sm h-full">
+              <div className="flex flex-col justify-between h-full">
+                <div>
+                  <h4 className="text-lg font-medium">Lorem Ipsum</h4>
+                  <p className="line-clamp-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Autem ratione, ipsam odio dolores atque ducimus harum eos
+                    qui tenetur delectus, aspernatur ab
+                  </p>
+                </div>
+                <div className="flex-col sm:flex-row gap-2 mt-4 flex items-start sm:items-center justify-center sm:justify-between">
+                  <div className="flex items-center justify-start gap-4">
+                    <Icons.gitHub />
                   </div>
-                  <div className="flex-col sm:flex-row gap-2 mt-4 flex items-start sm:items-center justify-center sm:justify-between">
-                    <div className="flex items-center justify-start gap-4">
-                      <Icons.gitHub />
-                    </div>
-                    <div className="flex items-center justify-end gap-1">
-                      <p className="mt-[1.5px]">1</p>
-                      <StarIcon className="w-5 h-5" />
-                    </div>
+                  <div className="flex items-center justify-end gap-1">
+                    <p className="mt-[1.5px]">1</p>
+                    <StarIcon className="w-5 h-5" />
                   </div>
                 </div>
               </div>
-            </li>
-            <li className="rounded-md border bg-gray-50 border-gray-300 list-none hover:bg-gradient-to-r from-blue-300 to-blue-600 p-[2px]">
-              <div className="p-6 hover:border-gray-400 bg-gray-50 rounded-sm h-full">
-                <div className="flex flex-col justify-between h-full">
-                  <div>
-                    <h4 className="text-lg font-medium">Lorem Ipsum</h4>
-                    <p className="line-clamp-2">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Autem ratione, ipsam odio dolores atque ducimus harum eos
-                      qui tenetur delectus, aspernatur ab
-                    </p>
+            </div>
+          </li>
+          <li className="rounded-md border bg-white border-gray-300 list-none hover:bg-gradient-to-r from-blue-300 to-blue-600 p-[2px]">
+            <div className="p-6 hover:border-gray-400 bg-white rounded-sm h-full">
+              <div className="flex flex-col justify-between h-full">
+                <div>
+                  <h4 className="text-lg font-medium">Lorem Ipsum</h4>
+                  <p className="line-clamp-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Autem ratione, ipsam odio dolores atque ducimus harum eos
+                    qui tenetur delectus, aspernatur ab
+                  </p>
+                </div>
+                <div className="flex-col sm:flex-row gap-2 mt-4 flex items-start sm:items-center justify-center sm:justify-between">
+                  <div className="flex items-center justify-start gap-4">
+                    <Icons.gitHub />
                   </div>
-                  <div className="flex-col sm:flex-row gap-2 mt-4 flex items-start sm:items-center justify-center sm:justify-between">
-                    <div className="flex items-center justify-start gap-4">
-                      <Icons.gitHub />
-                    </div>
-                    <div className="flex items-center justify-end gap-1">
-                      <p className="mt-[1.5px]">1</p>
-                      <StarIcon className="w-5 h-5" />
-                    </div>
+                  <div className="flex items-center justify-end gap-1">
+                    <p className="mt-[1.5px]">1</p>
+                    <StarIcon className="w-5 h-5" />
                   </div>
                 </div>
               </div>
-            </li>
-          </ul>
-        </section>
-      </div>
+            </div>
+          </li>
+        </ul>
+      </section>
     </main>
   );
 }
