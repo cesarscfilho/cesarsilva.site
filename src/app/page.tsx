@@ -8,7 +8,7 @@ export default function Home() {
         <div className="h-24 w-24 rounded-full bg-gradient-to-r from-purple-600 to-blue-600" />
         <div className="col-span-5 space-y-3">
           <h1 className="text-4xl font-extrabold mb-0">
-            I&apos; Cesar, a Front-end Developer.
+            I&apos;m Cesar, a Front-end Developer.
           </h1>
           <p>I like to learn new technologies and create applications.</p>
           <div className="flex gap-4">
