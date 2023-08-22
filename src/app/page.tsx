@@ -1,6 +1,6 @@
-import { GridBg } from "@/components/GridBg";
 import { Icons } from "@/components/Icons";
 import { cn } from "@/libs/utils";
+import { StarIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -38,7 +38,57 @@ export default function Home() {
         <div className="border-t border-dashed border-gray-800"></div>
       </div>
       <div>
-        <h2 className="text-xl font-medium mb-1">Projects</h2>
+        <section>
+          <h2 className="text-xl font-medium mb-1">Projects</h2>
+          <ul className="md:grid md:grid-cols-2 gap-4 flex flex-col mt-3">
+            <li className="rounded-md border bg-gray-50 border-gray-300 list-none hover:bg-gradient-to-r from-blue-300 to-blue-600 p-[2px]">
+              <div className="p-6 hover:border-gray-400 bg-gray-50 rounded-sm h-full">
+                <div className="flex flex-col justify-between h-full">
+                  <div>
+                    <h4 className="text-lg font-medium">Lorem Ipsum</h4>
+                    <p className="line-clamp-2">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Autem ratione, ipsam odio dolores atque ducimus harum eos
+                      qui tenetur delectus, aspernatur ab
+                    </p>
+                  </div>
+                  <div className="flex-col sm:flex-row gap-2 mt-4 flex items-start sm:items-center justify-center sm:justify-between">
+                    <div className="flex items-center justify-start gap-4">
+                      <Icons.gitHub />
+                    </div>
+                    <div className="flex items-center justify-end gap-1">
+                      <p className="mt-[1.5px]">1</p>
+                      <StarIcon className="w-5 h-5" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li className="rounded-md border bg-gray-50 border-gray-300 list-none hover:bg-gradient-to-r from-blue-300 to-blue-600 p-[2px]">
+              <div className="p-6 hover:border-gray-400 bg-gray-50 rounded-sm h-full">
+                <div className="flex flex-col justify-between h-full">
+                  <div>
+                    <h4 className="text-lg font-medium">Lorem Ipsum</h4>
+                    <p className="line-clamp-2">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Autem ratione, ipsam odio dolores atque ducimus harum eos
+                      qui tenetur delectus, aspernatur ab
+                    </p>
+                  </div>
+                  <div className="flex-col sm:flex-row gap-2 mt-4 flex items-start sm:items-center justify-center sm:justify-between">
+                    <div className="flex items-center justify-start gap-4">
+                      <Icons.gitHub />
+                    </div>
+                    <div className="flex items-center justify-end gap-1">
+                      <p className="mt-[1.5px]">1</p>
+                      <StarIcon className="w-5 h-5" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
       </div>
     </main>
   );
