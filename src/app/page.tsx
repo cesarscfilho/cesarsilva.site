@@ -1,9 +1,20 @@
+import { GridBg } from "@/components/GridBg";
+import { cn } from "@/libs/utils";
 import { Github, Twitter } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="max-w-3xl m-auto my-6 rounded-md">
+      <GridBg
+        width={40}
+        height={40}
+        x={-1}
+        y={-1}
+        className={cn(
+          "-z-10 stroke-gray-300/30 [mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
+        )}
+      />
       <div className="flex flex-col md:grid md:grid-cols-6 items-start md:items-center justify-center gap-8">
         <div className="h-24 w-24 rounded-full bg-gradient-to-r from-purple-600 to-blue-600" />
         <div className="col-span-5 space-y-3">
