@@ -1,6 +1,6 @@
 import { GridBg } from "@/components/GridBg";
+import { Icons } from "@/components/Icons";
 import { cn } from "@/libs/utils";
-import { Github, Twitter } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -23,11 +23,20 @@ export default function Home() {
           </h1>
           <p>I like to learn new technologies and create applications.</p>
           <div className="flex gap-4">
-            <Link target="_blank" href="https://github.com/cesarsdcf">
-              <Github className="w-5 h-5" />
+            <Link
+              className="text-gray-900 hover:text-gray-500"
+              target="_blank"
+              href="https://github.com/cesarsdcf"
+            >
+              <Icons.gitHub className="w-5 h-5" />
             </Link>
-            <Link target="_blank" href="https://twitter.com/cesardotdev">
-              <Twitter className="w-5 h-5 " />
+
+            <Link
+              className="text-gray-900 hover:text-gray-500"
+              target="_blank"
+              href="https://twitter.com/cesardotdev"
+            >
+              <Icons.twitter className="w-5 h-5 " />
             </Link>
           </div>
         </div>
