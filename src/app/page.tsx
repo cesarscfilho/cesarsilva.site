@@ -6,15 +6,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="max-w-3xl m-auto my-6 rounded-md">
-      <GridBg
-        width={40}
-        height={40}
-        x={-1}
-        y={-1}
-        className={cn(
-          "-z-10 stroke-gray-300/30 [mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
-        )}
-      />
       <div className="flex flex-col md:grid md:grid-cols-6 items-start md:items-center justify-center gap-8">
         <div className="h-24 w-24 rounded-full bg-gradient-to-r from-purple-600 to-blue-600" />
         <div className="col-span-5 space-y-3">
@@ -32,7 +23,7 @@ export default function Home() {
             </Link>
 
             <Link
-              className="text-gray-900 hover:text-gray-500"
+              className="text-gray-900 hover:text-gray-500 "
               target="_blank"
               href="https://twitter.com/cesardotdev"
             >
@@ -41,7 +32,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="my-6 bg-gray-300 h-[1px]" />
+      <div className="relative my-6">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent to-white"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-white to-transparent"></div>
+        <div className="border-t border-dashed border-gray-800"></div>
+      </div>
       <div>
         <h2 className="text-xl font-medium mb-1">Projects</h2>
       </div>
