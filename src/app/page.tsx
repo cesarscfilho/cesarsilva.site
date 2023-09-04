@@ -7,11 +7,22 @@ export default function Home() {
   type Project = {
     title: string;
     description: string;
-    urlGithub: string;
-    url: string;
+    links: {
+      urlGithub: string;
+      url: string;
+    }
   };
 
-  const projects: Project[] = [];
+  const projects: Project[] = [
+    {
+      title: "Form Mult Step",
+      description: "Mult Step Form whith Shadcn/iu and React Hook Form",
+      links: {
+        url: "https://auth-mult-step-shadcn.vercel.app/",
+        urlGithub: "https://github.com/cesarsdcf/auth-mult-step-shadcn"
+      }
+    }
+  ];
 
   return (
     <main className="max-w-6xl m-auto my-6 rounded-md flex flex-col md:flex-row">
@@ -51,10 +62,10 @@ export default function Home() {
                   </div>
                   <div className="flex-col sm:flex-row gap-2 mt-4 flex items-start sm:items-center justify-center sm:justify-between">
                     <div className="flex items-center justify-start gap-4">
-                      <Link href={project.urlGithub}>
+                      <Link href={project.links.urlGithub}>
                         <Icons.github className="w-4 h-4 hover:scale-110" />
                       </Link>
-                      <Link href={project.url}>
+                      <Link href={project.links.url}>
                         <Icons.externallink className="w-4 h-4 hover:scale-110" />
                       </Link>
                     </div>
@@ -65,7 +76,7 @@ export default function Home() {
           ))}
 
           {projects.length === 0 && (
-            <p className="text-gray-500 text-center">No projects...</p>
+            <h1 className="text-gray-500">Form Mult Step</h1>
           )}
         </ul>
       </section>
