@@ -1,9 +1,7 @@
 import {
   ExternalLink,
-  Twitter,
   type IconNode as LucideIcon,
   LucideProps,
-  Github,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
