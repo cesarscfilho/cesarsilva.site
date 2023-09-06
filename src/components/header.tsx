@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Balancer } from "react-wrap-balancer"
-import { Icons } from "./icons"
+import { Icons } from "@/components/icons"
 
 export const Header = () => {
     return (
