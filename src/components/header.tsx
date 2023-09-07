@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { Balancer } from "react-wrap-balancer"
-import { Icons } from "@/components/icons"
 
 export const Header = () => {
     return (
@@ -14,11 +13,11 @@ export const Header = () => {
             I am aI like to learn new technologies and create applications.
           </p>
           <div className="flex gap-4">
-            <Link target="_blank" href="https://twitter.com/cesardotdev">
-              <Icons.twitter className="w-5 h-5 text-gray-600 hover:text-gray-900" />
+            <Link className="text-primary underline-offset-4 hover:underline" target="_blank" href="https://twitter.com/cesardotdev">
+              Twitter
             </Link>
-            <Link target="_blank" href="https://github.com/cesarsdcf">
-              <Icons.github className="w-5 h-5 text-gray-600 hover:text-gray-900" />
+            <Link className="text-primary underline-offset-4 hover:underline" target="_blank" href="https://github.com/cesarsdcf">
+              GitHub
             </Link>
           </div>
         </div>

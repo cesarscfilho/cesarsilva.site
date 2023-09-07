@@ -15,7 +15,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="max-w-6xl m-auto my-6 rounded-md flex flex-col md:flex-row">
+    <main className="max-w-7xl m-auto my-6 rounded-md flex flex-col">
      <Header />
       <section className="mt-10">
         <h2 className="text-2xl font-medium mb-5">Projects</h2>

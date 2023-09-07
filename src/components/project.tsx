@@ -1,5 +1,5 @@
+import { ExternalLink } from "lucide-react";
 import Link from "next/link";
-import { Icons } from "./icons";
 
 interface ProjectProps {
     title: string;
@@ -23,11 +23,11 @@ export const Project = ({ title, description, links }: ProjectProps) => {
             </div>
             <div className="flex-col sm:flex-row gap-2 mt-4 flex items-start sm:items-center justify-center sm:justify-between">
               <div className="flex items-center justify-start gap-4">
-                <Link href={links.urlGithub}>
-                  <Icons.github className="w-4 h-4 hover:scale-110" />
+                <Link className="text-primary underline-offset-4 hover:underline" href={links.urlGithub}>
+                  GitHub
                 </Link>
-                <Link href={links.url}>
-                  <Icons.externallink className="w-4 h-4 hover:scale-110" />
+                <Link className="text-primary underline-offset-4 hover:underline" href={links.url}>
+                  Visit
                 </Link>
               </div>
             </div>
