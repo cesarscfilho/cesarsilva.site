@@ -18,7 +18,7 @@ export default function Home() {
     <main className="max-w-7xl m-auto my-6 rounded-md flex flex-col">
      <Header />
       <section className="mt-10">
-        <h2 className="text-2xl font-medium mb-5">Projects</h2>
+        <h2 className="text-2xl font-medium mb-5 text-blue-800">Projects</h2>
         <ul className="md:grid lg:grid-cols-2 gap-4 flex flex-col mt-3">
           {projects.map((project, i) => (
            <Project 

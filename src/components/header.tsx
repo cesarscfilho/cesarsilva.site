@@ -6,7 +6,7 @@ export const Header = () => {
         <header className="flex flex-col self-start gap-8 md:w-[850px]">
         <div className="h-24 w-24 rounded bg-gradient-to-r from-blue-600 to-green-600" />
         <div className="space-y-3">
-          <h1 className="text-3xl font-extrabold mb-0">
+          <h1 className="text-3xl font-extrabold mb-0 text-blue-800">
             <Balancer>I&apos;m Cesar, a Front-end Developer.</Balancer>
           </h1>
           <p className="text-gray-600">
