@@ -19,11 +19,19 @@ export default function Home() {
         url: "https://thestore-tau.vercel.app/",
         urlGithub: "https://github.com/cesarsdcf/thestore"
       }
+    },
+    {
+      title: "Trilhos Precisos Ltda.",
+      description: "É uma empresa fictícia criada no ChatGPT para aprimorar e mostrar minhas habilidades em desenvolvimento de aplicativos Web com NextJs.",
+      links: {
+        url: "https://hs-site-fawn.vercel.app/",
+        urlGithub: "https://github.com/cesarsdcf/trilhos-precisos"
+      }
     }
   ];
 
   return (
-    <main className="max-w-7xl m-auto my-6 rounded-md flex flex-col">
+    <main className="max-w-6xl m-auto my-6 rounded-md flex flex-col">
      <Header />
       <section className="mt-10">
         <h2 className="text-2xl font-medium mb-5 text-blue-800">Projects</h2>

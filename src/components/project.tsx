@@ -1,4 +1,4 @@
-import { ExternalLink } from "lucide-react";
+
 import Link from "next/link";
 
 interface ProjectProps {
@@ -23,10 +23,10 @@ export const Project = ({ title, description, links }: ProjectProps) => {
             </div>
             <div className="flex-col sm:flex-row gap-2 mt-4 flex items-start sm:items-center justify-center sm:justify-between">
               <div className="flex items-center justify-start gap-4">
-                <Link className="text-primary underline-offset-4 hover:underline" href={links.urlGithub}>
+                <Link target="_blank" className="text-primary underline-offset-4 hover:underline" href={links.urlGithub}>
                   GitHub
                 </Link>
-                <Link className="text-primary underline-offset-4 hover:underline" href={links.url}>
+                <Link target="_blank" className="text-primary underline-offset-4 hover:underline" href={links.url}>
                   Visit
                 </Link>
               </div>
