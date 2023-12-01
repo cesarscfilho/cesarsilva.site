@@ -21,12 +21,12 @@ export default function Home() {
           </p>
         </div>
         <div className="flex flex-col md:flex-row items-center gap-4">
-          <Link href={siteConfig.links.linkedin} className={cn(buttonVariants({variant: "outline", size:"icon" }))}>
+          <Link target="_blank" href={siteConfig.links.linkedin} className={cn(buttonVariants({variant: "outline", size:"icon" }))}>
 
             <LinkedInLogoIcon className="h-4 w-4" />
             <span className="sr-only">LinkedIn link</span>
           </Link>
-          <Link href={siteConfig.links.github} className={cn(buttonVariants({variant: "outline", size:"icon" }))}>
+          <Link target="_blank" href={siteConfig.links.github} className={cn(buttonVariants({variant: "outline", size:"icon" }))}>
             <GitHubLogoIcon className="h-4 w-4" />
             <span className="sr-only">Github link</span>
           </Link>

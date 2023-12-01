@@ -24,7 +24,7 @@ export const Project = ({ title, description, links }: ProjectProps) => {
             <GitHubLogoIcon className="h-4 w-4" />
             <span className="sr-only">{title} repository link</span>
         </Link>
-        <Link target="_blank" href={links.urlGithub} className={cn(buttonVariants({variant: "outline", size:"icon" }))}>
+        <Link target="_blank" href={links.url} className={cn(buttonVariants({variant: "outline", size:"icon" }))}>
             <Link1Icon className="h-4 w-4" />
             <span className="sr-only">{title} repository link</span>
         </Link>
