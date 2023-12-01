@@ -1,6 +1,5 @@
 import { Balancer } from "react-wrap-balancer"
 import { Project } from "@/components/project";
-import { Project as ProjectType } from "@/types/project";
 import { ModeToggle } from "@/components/theme-toggle";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { GitHubLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
@@ -9,32 +8,6 @@ import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/config";
 
 export default function Home() {
-  const projects: ProjectType[] = [
-    {
-      title: "Form Mult Step",
-      description: "Mult Step Form whith Shadcn/iu and React Hook Form",
-      links: {
-        url: "https://auth-mult-step-shadcn.vercel.app/",
-        urlGithub: "https://github.com/cesarsdcf/auth-mult-step-shadcn"
-      }
-    },
-    {
-      title: "TheStore",
-      description: "This is an open source project for a store product manager build with everything new in Next.js 13.",
-      links: {
-        url: "https://thestore-tau.vercel.app/",
-        urlGithub: "https://github.com/cesarsdcf/thestore"
-      }
-    },
-    {
-      title: "Trilhos Precisos Ltda.",
-      description: "É uma empresa fictícia criada no ChatGPT para aprimorar e mostrar minhas habilidades em desenvolvimento de aplicativos Web com NextJs.",
-      links: {
-        url: "https://hs-site-fawn.vercel.app/",
-        urlGithub: "https://github.com/cesarsdcf/trilhos-precisos"
-      }
-    }
-  ];
 
   return (
     <main className="grid items-center gap-8 pb-8 pt-6 md:py-8 container max-w-3xl py-3">
@@ -61,9 +34,9 @@ export default function Home() {
         </div>
       </section>
       <section className="mt-10">
-        <h2 className="text-md font-medium mb-5">Projects</h2>
-        <ul className="md:grid lg:grid-cols-2 gap-4 flex flex-col mt-3">
-          {projects.map((project, i) => (
+        <h2 className="text-xl font-medium mb-5">Projects</h2>
+        <ul className="flex flex-col space-y-7">
+          {siteConfig.projects.map((project, i) => (
            <Project 
             key={i}
             title={project.title}
@@ -71,14 +44,13 @@ export default function Home() {
             links={project.links}/>
           ))}
 
-          {projects.length === 0 && (
+          {siteConfig.projects.length === 0 && (
             <h1 className="text-gray-500">No projects...</h1>
           )}
         </ul>
       </section>
       <section className="mt-10">
-        <h2 className="text-md font-medium mb-5">Works</h2>
-        
+        <h2 className="text-xl font-medium mb-5">Works</h2>
       </section>
     </main>
   );

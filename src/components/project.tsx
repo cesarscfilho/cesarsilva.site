@@ -1,5 +1,8 @@
 
+import { GitHubLogoIcon, Link1Icon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import { buttonVariants } from "./ui/button";
+import { cn } from "@/lib/utils";
 
 interface ProjectProps {
     title: string;
@@ -13,26 +16,18 @@ interface ProjectProps {
 export const Project = ({ title, description, links }: ProjectProps) => {
     return (
         <li
-        className="rounded-md bg-secondary border list-none"
-      >
-        <div className="p-6 hover:border-gray-400 rounded-sm ">
-          <div className="flex flex-col justify-between">
-            <div>
-              <h4 className="text-lg font-medium">{title}</h4>
-              <p className="line-clamp-2">{description}</p>
-            </div>
-            <div className="flex-col sm:flex-row gap-2 mt-4 flex items-start sm:items-center justify-center sm:justify-between">
-              <div className="flex items-center justify-start gap-4">
-                <Link target="_blank" className="text-primary underline-offset-4 hover:underline" href={links.urlGithub}>
-                  GitHub
-                </Link>
-                <Link target="_blank" className="text-primary underline-offset-4 hover:underline" href={links.url}>
-                  Visit
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+      className="space-y-2"
+      > 
+        <h2 className="font-semibold text-ml">{title}</h2>
+        <p className="text-muted-foreground text-base">{description}</p>
+        <Link href={links.urlGithub} className={cn(buttonVariants({variant: "outline", size:"icon" }), "mr-2")}>
+            <GitHubLogoIcon className="h-4 w-4" />
+            <span className="sr-only">{title} repository link</span>
+        </Link>
+        <Link href={links.urlGithub} className={cn(buttonVariants({variant: "outline", size:"icon" }))}>
+            <Link1Icon className="h-4 w-4" />
+            <span className="sr-only">{title} repository link</span>
+        </Link>
       </li>
     )
 }
