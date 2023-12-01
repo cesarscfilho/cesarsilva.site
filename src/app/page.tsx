@@ -2,6 +2,11 @@ import { Balancer } from "react-wrap-balancer"
 import { Project } from "@/components/project";
 import { Project as ProjectType } from "@/types/project";
 import { ModeToggle } from "@/components/theme-toggle";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { GitHubLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { siteConfig } from "@/lib/config";
 
 export default function Home() {
   const projects: ProjectType[] = [
@@ -42,7 +47,18 @@ export default function Home() {
             I am aI like to learn new technologies and create applications.
           </p>
         </div>
-        <ModeToggle />
+        <div className="flex flex-col md:flex-row items-center gap-4">
+          <Link href={siteConfig.links.linkedin} className={cn(buttonVariants({variant: "outline", size:"icon" }))}>
+
+            <LinkedInLogoIcon className="h-4 w-4" />
+            <span className="sr-only">LinkedIn link</span>
+          </Link>
+          <Link href={siteConfig.links.github} className={cn(buttonVariants({variant: "outline", size:"icon" }))}>
+            <GitHubLogoIcon className="h-4 w-4" />
+            <span className="sr-only">Github link</span>
+          </Link>
+          <ModeToggle />
+        </div>
       </section>
       <section className="mt-10">
         <h2 className="text-md font-medium mb-5">Projects</h2>

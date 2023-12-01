@@ -1,13 +1,15 @@
-import { cn } from "@/libs/utils";
+import { cn } from "@/lib/utils";
 import "./globals.css";
 import type { Metadata } from "next";
 
 
 import { ThemeProvider } from "@/components/theme-provider";
 import { fontSans } from "@/lib/fonts";
+import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Cesar - Portfolio",
+  title: siteConfig.name,
+  description: siteConfig.description
 };
 
 export default function RootLayout({
@@ -16,8 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="w-full h-screen bg-gray-50">
-
+    <html lang="en">
          <body
          className={cn(
            "min-h-screen bg-background font-sans antialiased",
