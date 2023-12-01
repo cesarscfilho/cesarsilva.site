@@ -1,6 +1,7 @@
-import { Header } from "@/components/header";
+import { Balancer } from "react-wrap-balancer"
 import { Project } from "@/components/project";
 import { Project as ProjectType } from "@/types/project";
+import { ModeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   const projects: ProjectType[] = [
@@ -31,10 +32,20 @@ export default function Home() {
   ];
 
   return (
-    <main className="max-w-6xl m-auto my-6 rounded-md flex flex-col">
-     <Header />
+    <main className="grid items-center gap-8 pb-8 pt-6 md:py-8 container max-w-3xl py-3">
+      <section className="flex flex-row justify-between">
+        <div className="space-y-3"> 
+          <h1 className="text-xl font-extrabold mb-0">
+            <Balancer>I&apos;m Cesar</Balancer>
+          </h1>
+          <p>
+            I am aI like to learn new technologies and create applications.
+          </p>
+        </div>
+        <ModeToggle />
+      </section>
       <section className="mt-10">
-        <h2 className="text-2xl font-medium mb-5 text-blue-800">Projects</h2>
+        <h2 className="text-md font-medium mb-5">Projects</h2>
         <ul className="md:grid lg:grid-cols-2 gap-4 flex flex-col mt-3">
           {projects.map((project, i) => (
            <Project 
@@ -48,6 +59,10 @@ export default function Home() {
             <h1 className="text-gray-500">No projects...</h1>
           )}
         </ul>
+      </section>
+      <section className="mt-10">
+        <h2 className="text-md font-medium mb-5">Works</h2>
+        
       </section>
     </main>
   );

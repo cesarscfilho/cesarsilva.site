@@ -13,7 +13,7 @@ interface ProjectProps {
 export const Project = ({ title, description, links }: ProjectProps) => {
     return (
         <li
-        className="rounded-md border bg-white border-gray-300 list-none"
+        className="rounded-md bg-secondary border list-none"
       >
         <div className="p-6 hover:border-gray-400 rounded-sm ">
           <div className="flex flex-col justify-between">
