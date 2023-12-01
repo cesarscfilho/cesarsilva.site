@@ -20,11 +20,11 @@ export const Project = ({ title, description, links }: ProjectProps) => {
       > 
         <h2 className="font-semibold text-ml">{title}</h2>
         <p className="text-muted-foreground text-base">{description}</p>
-        <Link href={links.urlGithub} className={cn(buttonVariants({variant: "outline", size:"icon" }), "mr-2")}>
+        <Link target="_blank" href={links.urlGithub} className={cn(buttonVariants({variant: "outline", size:"icon" }), "mr-2")}>
             <GitHubLogoIcon className="h-4 w-4" />
             <span className="sr-only">{title} repository link</span>
         </Link>
-        <Link href={links.urlGithub} className={cn(buttonVariants({variant: "outline", size:"icon" }))}>
+        <Link target="_blank" href={links.urlGithub} className={cn(buttonVariants({variant: "outline", size:"icon" }))}>
             <Link1Icon className="h-4 w-4" />
             <span className="sr-only">{title} repository link</span>
         </Link>
