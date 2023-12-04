@@ -32,6 +32,18 @@ export const siteConfig = {
             urlGithub: "https://github.com/cesarsdcf/thestore"
           }
         },
-      ] satisfies Project[]
+      ] satisfies Project[],
+      works:[
+        {
+          title: "DRT Sistemas",
+          description:  "Uma empresa de marketing digital onde eu era responsal por fazer manutenção e melhorias no site que era em PHP, Wordpress.",
+          time: "6 meses"
+        },
+        {
+          title: "Ancarp",
+          description:  "Uma empresa de desenvolvimento de software, atuei com desenvolvedor front-end com ReactJs, React Native e TypeScript.",
+          time: "7 meses"
+        }
+      ]
 }
 

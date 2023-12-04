@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/config";
 import { badgeVariants } from "@/components/ui/badge";
 import { ContactButton } from "@/components/contact-button";
+import { Work } from "@/components/work";
 
 export default function Home() {
 
@@ -69,8 +70,13 @@ export default function Home() {
               <span className="sr-only">Ver mais</span>
         </Link> */}
       </section>
-      <section className="mt-8">
-        <h2 className="text-xl font-medium mb-5">Works</h2>
+      <section className="my-8">
+        <h2 className="text-xl font-medium mb-5">Experiências</h2>
+        <ul className="flex flex-col space-y-7">
+        {siteConfig.works.map((work, i) => (
+            <Work key={work.title} title={work.title} description={work.description} time={work.time} />
+        ))}
+        </ul>
       </section>
     </main>
   );
