@@ -42,7 +42,7 @@ export default function Home() {
         </div>
       </section>
       <section className="mt-6">
-        <h2 className="text-xl font-medium mb-5">Projetos</h2>
+        <h2 className="text-2xl mb-5 font-bold">Projetos</h2>
         <ul className="flex flex-col space-y-7">
           {siteConfig.projects.map((project, i) => (
            <Project 
@@ -71,7 +71,7 @@ export default function Home() {
         </Link> */}
       </section>
       <section className="my-8">
-        <h2 className="text-xl font-medium mb-5">Experiências</h2>
+        <h2 className="text-2xl font-bold mb-5">Experiências</h2>
         <ul className="flex flex-col space-y-7">
         {siteConfig.works.map((work, i) => (
             <Work key={work.title} title={work.title} description={work.description} time={work.time} />
