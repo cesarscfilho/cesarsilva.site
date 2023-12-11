@@ -9,6 +9,7 @@ import { siteConfig } from "@/lib/config";
 import { badgeVariants } from "@/components/ui/badge";
 import { ContactButton } from "@/components/contact-button";
 import { Work } from "@/components/work";
+import { AlertBar } from "@/components/alertbar";
 
 export default function Home() {
 
@@ -26,7 +27,8 @@ export default function Home() {
             Comecei a construir um projeto open-source chamado <Link target="_blank" href="https://bidshop.vercel.app/" className={cn(badgeVariants({variant: "secondary"}), "p-1 no-underline")} >Bidshop</Link>, uma plataforma de venda e compra online de produtos, onde é possível enviar ofertas para o vendedor e conversar com ele em tempo real através de um chat dentro do aplicativo.
           </p>
      
-          <ContactButton/>
+          
+          <AlertBar />
         </div>
         <div className="flex flex-col md:flex-row items-center gap-4 self-start">
           <Link target="_blank" href={siteConfig.links.linkedin} className={cn(buttonVariants({variant: "outline", size:"icon" }))}>

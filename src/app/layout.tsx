@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { fontSans } from "@/lib/fonts";
 import { siteConfig } from "@/lib/config";
+import { AlertBar } from "@/components/alertbar";
 
 export const metadata: Metadata = {
   title: siteConfig.name,
