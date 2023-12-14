@@ -20,7 +20,7 @@ export function AlertBar() {
                 Atenção!
             </CardTitle>
             <CardDescription className="text-md">
-            Estou em busca de novas oportunidades.
+            Estou em busca de novas oportunidades de emprego.
             </CardDescription>
             </CardHeader>
             <CardContent>
