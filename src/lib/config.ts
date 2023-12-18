@@ -5,7 +5,8 @@ export const siteConfig = {
     description: "",
     links: {
         linkedin: "https://www.linkedin.com/in/cesar-silva-950126232/",
-        github: "https://github.com/cesarsdcf"
+        github: "https://github.com/cesarsdcf",
+        resumeDowload: "https://drive.google.com/uc?export=download&id=1aEhUeQ0VBvu7ysSdCJS9SYYWvJ4qDOUE"
     },
    projects: [
         {
