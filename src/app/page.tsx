@@ -73,9 +73,9 @@ export default async function Home() {
           <p >  
             Sou <span className="font-bold">Cesar Silva</span>, desenvolvedor fullstack mas atualmente focado no front-end construindo aplicações para a web e dispositivos móveis.
           </p>
-          <p>
+          {/* <p>
             Comecei a construir um projeto open-source chamado <Link target="_blank" href="https://bidshop.vercel.app/" className={cn(badgeVariants({variant: "secondary"}), "p-1 no-underline")} >Bidshop</Link>, uma plataforma de venda e compra online de produtos, onde é possível enviar ofertas para o vendedor.
-          </p>
+          </p> */}
           <AlertBar />
         </div>
 
