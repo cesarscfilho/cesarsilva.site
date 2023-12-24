@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function ContactButton() {
     return (
-        <Link href="mailto:cesarfilhoslv@gmail.com" className="no-underline block">
+        <Link href="mailto:cesarscfilho@gmail.com" className="no-underline block">
             <Alert variant={"destructive"}>
                 <AlertCircle className="h-4 w-4" />
                 <AlertTitle className="text-base">Atenção!</AlertTitle>
