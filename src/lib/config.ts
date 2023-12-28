@@ -5,16 +5,16 @@ export const siteConfig = {
     description: "",
     links: {
         linkedin: "https://www.linkedin.com/in/cesar-silva-950126232/",
-        github: "https://github.com/cesarsdcf",
+        github: "https://github.com/cesarscfilho",
         resumeDowload: "https://drive.google.com/uc?export=download&id=1aEhUeQ0VBvu7ysSdCJS9SYYWvJ4qDOUE"
     },
    projects: [
         {
-          title: "Trilhos Precisos Ltda.",
+          title: "Sneakers",
           description: "É uma empresa fictícia criada no ChatGPT para aprimorar e mostrar minhas habilidades em desenvolvimento de aplicativos Web com NextJs.",
           links: {
             url: "https://hs-site-fawn.vercel.app/",
-            urlGithub: "https://github.com/cesarsdcf/trilhos-precisos"
+            urlGithub: "https://github.com/cesarscfilho/sneakers"
           }
         },
         {
@@ -22,7 +22,7 @@ export const siteConfig = {
           description: "Mult Step Form whith Shadcn/iu and React Hook Form",
           links: {
             url: "https://auth-mult-step-shadcn.vercel.app/",
-            urlGithub: "https://github.com/cesarsdcf/auth-mult-step-shadcn"
+            urlGithub: "https://github.com/cesarscfilho/auth-mult-step-shadcn"
           }
         },
         // {
