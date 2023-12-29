@@ -50,7 +50,7 @@ export default async function Home() {
               </Link>
               </TooltipTrigger>
               <TooltipContent>
-                Gitub
+                Github
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
