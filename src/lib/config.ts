@@ -13,7 +13,7 @@ export const siteConfig = {
           title: "Sneakers",
           description: "É uma empresa fictícia criada no ChatGPT para aprimorar e mostrar minhas habilidades em desenvolvimento de aplicativos Web com NextJs.",
           links: {
-            url: "https://hs-site-fawn.vercel.app/",
+            url: "https://sneakers-chi-orpin.vercel.app/",
             urlGithub: "https://github.com/cesarscfilho/sneakers"
           }
         },
