@@ -10,6 +10,14 @@ export const siteConfig = {
     },
    projects: [
         {
+          title: "Easybee - React Native",
+          description: "A proposta inicial deste projeto em React Native/Expo era aprimorar o front-end de um aplicativo já existente em produção, de uma empresa em que trabalhava.",
+          links: {
+            url: "https://github.com/cesarscfilho/easybee",
+            urlGithub: "https://github.com/cesarscfilho/easybee"
+          }
+        },
+        {
           title: "Sneakers",
           description: "É uma empresa fictícia criada no ChatGPT para aprimorar e mostrar minhas habilidades em desenvolvimento de aplicativos Web com NextJs.",
           links: {
@@ -19,7 +27,7 @@ export const siteConfig = {
         },
         {
           title: "Form Mult Step",
-          description: "Mult Step Form whith Shadcn/iu and React Hook Form",
+          description: "Mult Step Form with Shadcn/iu and React Hook Form",
           links: {
             url: "https://auth-mult-step-shadcn.vercel.app/",
             urlGithub: "https://github.com/cesarscfilho/auth-mult-step-shadcn"
