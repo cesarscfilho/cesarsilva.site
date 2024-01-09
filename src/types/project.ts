@@ -3,6 +3,6 @@ export type Project = {
     description: string;
     links: {
       urlGithub: string;
-      url: string;
+      url?: string;
     }
   };

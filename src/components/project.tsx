@@ -9,7 +9,7 @@ interface ProjectProps {
     description: string;
     links: {
       urlGithub: string;
-      url: string;
+      url?: string;
     }
 }
 
@@ -24,10 +24,13 @@ export const Project = ({ title, description, links }: ProjectProps) => {
             <GitHubLogoIcon className="h-4 w-4" />
             <span className="sr-only">{title} repository link</span>
         </Link>
-        <Link target="_blank" href={links.url} className={cn(buttonVariants({variant: "outline", size:"icon" }))}>
+        {!links.url ? 
+          (null) : (
+          <Link target="_blank" href={links.url} className={cn(buttonVariants({variant: "outline", size:"icon" }))}>
             <Link1Icon className="h-4 w-4" />
             <span className="sr-only">{title} repository link</span>
-        </Link>
+          </Link>
+          )}
       </li>
     )
 }

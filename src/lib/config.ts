@@ -13,7 +13,6 @@ export const siteConfig = {
           title: "Easybee - React Native",
           description: "A proposta inicial deste projeto em React Native/Expo era aprimorar o front-end de um aplicativo já existente em produção, de uma empresa em que trabalhava.",
           links: {
-            url: "https://github.com/cesarscfilho/easybee",
             urlGithub: "https://github.com/cesarscfilho/easybee"
           }
         },
@@ -44,15 +43,15 @@ export const siteConfig = {
       ] satisfies Project[],
       works:[
         {
-          title: "DRT Sistemas",
-          description:  "Uma empresa de marketing digital onde eu era responsal por fazer manutenção e melhorias no site que era em PHP, Wordpress.",
-          time: "6 meses"
-        },
-        {
           title: "Ancarp",
           description:  "Uma empresa de desenvolvimento de software, atuei com desenvolvedor front-end com ReactJs, React Native e TypeScript.",
-          time: "7 meses"
-        }
+          time: "2023 -> 8 meses",
+        },
+        {
+          title: "DRT Sistemas",
+          description:  "Uma empresa de marketing digital onde eu era responsal por fazer manutenção e melhorias no site que era em PHP, Wordpress.",
+          time: "2022 -> 6 meses",
+        },
       ]
 }
 
