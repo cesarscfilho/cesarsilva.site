@@ -10,6 +10,14 @@ export const siteConfig = {
     },
    projects: [
         {
+          title: "Menup",
+          description: "Entrega de comida on-line sem esforço ao seu alcance.",
+          links: {
+            urlGithub: "https://github.com/cesarscfilho/menup-v1",
+            url: "https://menup-navy.vercel.app/"
+          }
+        },
+        {
           title: "Easybee - React Native",
           description: "A proposta inicial deste projeto em React Native/Expo era aprimorar o front-end de um aplicativo já existente em produção, de uma empresa em que trabalhava.",
           links: {
