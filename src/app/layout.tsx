@@ -2,11 +2,9 @@ import { absoluteUrl, cn } from "@/lib/utils";
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
 
-
 import { ThemeProvider } from "@/components/theme-provider";
 import { fontSans } from "@/lib/fonts";
 import { siteConfig } from "@/lib/config";
-import { AlertBar } from "@/components/alertbar";
 import { env } from "@/env.mjs";
 
 export const metadata: Metadata = {
