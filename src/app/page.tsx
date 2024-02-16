@@ -11,11 +11,11 @@ import { AlertBar } from "@/components/alertbar";
 import { Icons } from "@/components/icons";
 import { badgeVariants } from "@/components/ui/badge";
 import { Header } from "@/components/header";
+import { MenupLogo } from "@/components/menup-logo";
 
 export default async function Home() {
   return (
     <main className="container max-w-3xl py-3 md:py-4">
-
       <Header />
       <section className="prose prose-neutral dark:prose-invert my-6">
         <div className="prose prose-neutral dark:prose-invert">
@@ -30,14 +30,19 @@ export default async function Home() {
       <AlertBar />
       <section className="mt-6">
         <h2 className="text-2xl font-bold mb-5 flex items-center">Projetos</h2>
-        <ul className="flex flex-col space-y-7">
-          {siteConfig.projects.map((project, i) => (
+        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          {siteConfig.projects.map((project, i) =>{ 
+
+            const logo = project.logo ?? "logoempty"
+            return (
             <Project
               key={i}
+              logo={logo}
               title={project.title}
               description={project.description}
               links={project.links} />
-          ))}
+          )}
+          )}
 
           {siteConfig.projects.length === 0 && (
             <h1 className="text-gray-500">No projects...</h1>
