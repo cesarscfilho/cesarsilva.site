@@ -23,6 +23,9 @@ export default async function Home() {
             Sou <span className="font-bold">Cesar Silva</span>, desenvolvedor fullstack mas atualmente focado no front-end construindo aplicações para a web e dispositivos móveis.
           </p>
           <p>
+          <p>
+            Minhas principais techs incluem ReactJS, React Native/Expo, NextJs, Prisma/Drizzle, TypeScript, TailwindCss e Styled Components. 
+          </p>
             Atualmente estou construindo um projeto open-source chamado <Link target="_blank" href="https://menup-navy.vercel.app/" className={cn(badgeVariants({ variant: "secondary" }), "p-1 no-underline")}>Menup</Link>, uma plataforma de cardapio online construída com os recursos mais recentes do NextJs.
           </p>
         </div>
