@@ -21,13 +21,6 @@ export const siteConfig = {
       }
     },
     {
-      title: "Easybee - React Native",
-      description: "A proposta inicial deste projeto em React Native/Expo era aprimorar o front-end de um aplicativo já existente em produção, de uma empresa em que trabalhava.",
-      links: {
-        urlGithub: "https://github.com/cesarscfilho/easybee"
-      }
-    },
-    {
       title: "Sneakers",
       description: "É uma empresa fictícia criada no ChatGPT para aprimorar e mostrar minhas habilidades em desenvolvimento de aplicativos Web com NextJs.",
       links: {
