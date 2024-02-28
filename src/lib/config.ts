@@ -2,6 +2,7 @@ import { Project } from "@/types/project"
 
 export const siteConfig = {
   name: "cesarsilva",
+  title: "Desenvolvedor",
   description: "Site pessoal de Cesar Silva, construído com Next.js.",
   image: "https://github.com/cesarscfilho.png",
   links: {
@@ -21,6 +22,7 @@ export const siteConfig = {
         urlGithub: "https://github.com/cesarscfilho/menup-v1",
         url: "https://menup-navy.vercel.app/",
       },
+      language: "TypeScript",
     },
     {
       title: "Sneakers",
@@ -30,6 +32,7 @@ export const siteConfig = {
         url: "https://sneakers-chi-orpin.vercel.app/",
         urlGithub: "https://github.com/cesarscfilho/sneakers",
       },
+      language: "TypeScript",
     },
     {
       title: "Form Mult Step",
@@ -38,6 +41,7 @@ export const siteConfig = {
         url: "https://mult-step-shadcn.vercel.app/",
         urlGithub: "https://github.com/cesarscfilho/auth-mult-step-shadcn",
       },
+      language: "TypeScript",
     },
     // {
     //   title: "TheStore",
@@ -58,7 +62,7 @@ export const siteConfig = {
     {
       title: "DRT Sistemas",
       description:
-        "Uma empresa de marketing digital onde eu era responsavél por fazer manutenção e melhorias no site em PHP, Wordpress.",
+        "Uma empresa de marketing digital onde eu era responsavél por fazer manutenção e melhorias no site em PHP/Wordpress.",
       time: "2022 - 6 meses",
     },
   ],

@@ -11,12 +11,13 @@ import { AlertBar } from "@/components/alertbar"
 import { Icons } from "@/components/icons"
 import { badgeVariants } from "@/components/ui/badge"
 import { Header } from "@/components/layout/header"
+import { ProjectCard } from "@/components/cards/project-card"
 
 export default async function Home() {
   return (
-    <main className="mx-auto w-full max-w-3xl px-4 lg:px-20 pt-4 md:pt-10">
+    <>
       <Header />
-      <section className="prose prose-neutral dark:prose-invert my-6">
+      <section className="my-6">
         <div className="prose prose-neutral dark:prose-invert">
           <p>
             Sou <span className="font-bold">Cesar Silva</span>, desenvolvedor
@@ -50,15 +51,7 @@ export default async function Home() {
         <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {siteConfig.projects.map((project, i) => {
             const logo = project.logo ?? "logoempty"
-            return (
-              <Project
-                key={i}
-                logo={logo}
-                title={project.title}
-                description={project.description}
-                links={project.links}
-              />
-            )
+            return <ProjectCard key={i} project={project} />
           })}
 
           {siteConfig.projects.length === 0 && (
@@ -95,6 +88,6 @@ export default async function Home() {
           ))}
         </ul>
       </section>
-    </main>
+    </>
   )
 }
