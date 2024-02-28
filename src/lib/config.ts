@@ -3,6 +3,7 @@ import { Project } from "@/types/project"
 export const siteConfig = {
   name: "cesarsilva",
   description: "Site pessoal de Cesar Silva, construído com Next.js.",
+  image: "https://github.com/cesarscfilho.png",
   links: {
     linkedin: "https://www.linkedin.com/in/cesar-silva-950126232/",
     github: "https://github.com/cesarscfilho",

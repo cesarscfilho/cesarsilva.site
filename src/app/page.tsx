@@ -10,12 +10,11 @@ import { AlertBar } from "@/components/alertbar"
 
 import { Icons } from "@/components/icons"
 import { badgeVariants } from "@/components/ui/badge"
-import { Header } from "@/components/header"
-import { MenupLogo } from "@/components/menup-logo"
+import { Header } from "@/components/layout/header"
 
 export default async function Home() {
   return (
-    <main className="container max-w-3xl py-3 md:py-4">
+    <main className="mx-auto w-full max-w-3xl px-4 lg:px-20 pt-4 md:pt-10">
       <Header />
       <section className="prose prose-neutral dark:prose-invert my-6">
         <div className="prose prose-neutral dark:prose-invert">
@@ -25,11 +24,10 @@ export default async function Home() {
             para a web e dispositivos móveis.
           </p>
           <p>
-            <p>
-              Minhas principais techs incluem ReactJS, React Native/Expo,
-              NextJs, Prisma/Drizzle, TypeScript, TailwindCss e Styled
-              Components.
-            </p>
+            Minhas principais techs incluem ReactJS, React Native/Expo, NextJs,
+            Prisma/Drizzle, TypeScript, TailwindCss e Styled Components.
+          </p>
+          <p>
             Atualmente estou construindo um projeto open-source chamado{" "}
             <Link
               target="_blank"
@@ -46,7 +44,7 @@ export default async function Home() {
           </p>
         </div>
       </section>
-      <AlertBar />
+      {/* <AlertBar /> */}
       <section className="mt-6">
         <h2 className="text-2xl font-bold mb-5 flex items-center">Projetos</h2>
         <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
