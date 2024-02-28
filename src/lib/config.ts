@@ -39,7 +39,7 @@ export const siteConfig = {
       description: "Mult Step Form with Shadcn/iu and React Hook Form",
       links: {
         url: "https://mult-step-shadcn.vercel.app/",
-        urlGithub: "https://github.com/cesarscfilho/auth-mult-step-shadcn",
+        urlGithub: "https://github.com/cesarscfilho/mult-step-shadcn",
       },
       language: "TypeScript",
     },
