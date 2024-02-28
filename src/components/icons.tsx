@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
-import { IconProps } from "@radix-ui/react-icons/dist/types";
+import { cn } from "@/lib/utils"
+import { IconProps } from "@radix-ui/react-icons/dist/types"
 
 export const Icons = {
   works: (props: IconProps) => (
@@ -12,9 +12,14 @@ export const Icons = {
       aria-hidden="true"
       {...props}
     >
-
-      <path className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500" d="M2.75 9.75a3 3 0 013-3h12.5a3 3 0 013 3v8.5a3 3 0 01-3 3H5.75a3 3 0 01-3-3v-8.5z" />
-      <path className="stroke-zinc-400 dark:stroke-zinc-500" d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 001.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 012-2h2.5a2 2 0 012 2V6.5" />
+      <path
+        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+        d="M2.75 9.75a3 3 0 013-3h12.5a3 3 0 013 3v8.5a3 3 0 01-3 3H5.75a3 3 0 01-3-3v-8.5z"
+      />
+      <path
+        className="stroke-zinc-400 dark:stroke-zinc-500"
+        d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 001.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 012-2h2.5a2 2 0 012 2V6.5"
+      />
     </svg>
   ),
   email: (props: IconProps) => (
@@ -46,7 +51,7 @@ export const Icons = {
       viewBox="0 0 191 191"
       fill="#000"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn('h-10 w-10 rounded-lg bg-black text-secondary')}
+      className={cn("h-10 w-10 rounded-lg bg-black text-secondary")}
     >
       <g transform="translate(25, 58) scale(1.7)">
         <g fill="#fff" fillRule="nonzero">
@@ -61,7 +66,20 @@ export const Icons = {
     </svg>
   ),
   logoempty: (props: IconProps) => (
-    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" /><polyline points="10 2 10 10 13 7 16 10 16 2" /></svg>
-  )
-
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+      <polyline points="10 2 10 10 13 7 16 10 16 2" />
+    </svg>
+  ),
 }

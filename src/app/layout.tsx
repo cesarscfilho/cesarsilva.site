@@ -1,11 +1,11 @@
-import { absoluteUrl, cn } from "@/lib/utils";
-import "./globals.css";
-import type { Metadata, Viewport } from "next";
+import { absoluteUrl, cn } from "@/lib/utils"
+import "./globals.css"
+import type { Metadata, Viewport } from "next"
 
-import { ThemeProvider } from "@/components/theme-provider";
-import { fontSans } from "@/lib/fonts";
-import { siteConfig } from "@/lib/config";
-import { env } from "@/env.mjs";
+import { ThemeProvider } from "@/components/theme-provider"
+import { fontSans } from "@/lib/fonts"
+import { siteConfig } from "@/lib/config"
+import { env } from "@/env.mjs"
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
@@ -14,12 +14,7 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: [
-    "nextjs",
-    "react",
-    "react server components",
-    "cesar silva"
-  ],
+  keywords: ["nextjs", "react", "react server components", "cesar silva"],
   authors: [
     {
       name: "cesarsilva",
@@ -30,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt-BR",
-    url:siteConfig.url,
+    url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
@@ -51,25 +46,25 @@ export const viewport: Viewport = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
-         <body
-         className={cn(
-           "min-h-screen bg-background font-sans antialiased",
-           fontSans.variable,
-         )}
-       >
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
