@@ -15,12 +15,9 @@ interface ProjectProps {
 }
 
 export const Project = ({ title, description, links, logo }: ProjectProps) => {
-  const Logo = Icons[logo]
-
   return (
     <li className="flex flex-col justify-between space-y-2 p-4 border rounded-lg transition-colors hover:bg-muted/50">
       <div className="flex flex-row items-center gap-2">
-        {logo !== "logoempty" && <Logo className="size-12" />}
         <h2 className="font-semibold text-ml">{title}</h2>
       </div>
       <p className="text-muted-foreground text-base">{description}</p>
