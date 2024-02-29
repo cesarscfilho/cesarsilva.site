@@ -25,11 +25,10 @@ export default async function Home() {
             para a web e dispositivos móveis.
           </p>
           <p>
-            <p>
-              Minhas principais techs incluem ReactJS, React Native/Expo,
-              NextJs, Prisma/Drizzle, TypeScript, TailwindCss e Styled
-              Components.
-            </p>
+            Minhas principais techs incluem ReactJS, React Native/Expo, NextJs,
+            Prisma/Drizzle, TypeScript, TailwindCss e Styled Components.
+          </p>
+          <p>
             Atualmente estou construindo um projeto open-source chamado{" "}
             <Link
               target="_blank"
