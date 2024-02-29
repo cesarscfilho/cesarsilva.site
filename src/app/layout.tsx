@@ -17,11 +17,11 @@ export const metadata: Metadata = {
   keywords: ["nextjs", "react", "react server components", "cesar silva"],
   authors: [
     {
-      name: "cesarsilva",
-      url: "https://www.cesarsilva.site/",
+      name: siteConfig.name,
+      url: siteConfig.url,
     },
   ],
-  creator: "cesarsilva",
+  creator: siteConfig.name,
   openGraph: {
     type: "website",
     locale: "pt-BR",
@@ -43,13 +43,21 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
 }
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
+      <head>
+        <script
+          src="https://beamanalytics.b-cdn.net/beam.min.js"
+          data-token="b64f83a8-e087-40b1-905a-407d83f47885"
+          async
+        ></script>
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
@@ -62,7 +70,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <main className="grid items-center gap-2 pb-8 pt-6 md:py-8 mx-auto max-w-3xl p-4">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
