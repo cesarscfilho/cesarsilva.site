@@ -2,7 +2,6 @@ import { Project } from "@/components/project"
 import { buttonVariants } from "@/components/ui/button"
 import { ArrowRightIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
-import { cn } from "@/lib/utils"
 import { siteConfig } from "@/lib/config"
 
 import { Work } from "@/components/work"
@@ -12,6 +11,7 @@ import { Icons } from "@/components/icons"
 import { badgeVariants } from "@/components/ui/badge"
 import { Header } from "@/components/layout/header"
 import { ProjectCard } from "@/components/cards/project-card"
+import { cn } from "@/utils"
 
 export default async function Home() {
   return (

@@ -1,4 +1,4 @@
-import { absoluteUrl } from "@/lib/utils"
+import { absoluteUrl } from "@/utils"
 import { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -4,9 +4,7 @@ import { getDate } from "@/utils"
 
 export default async function AnalyticsPage() {
   const TRACKING_DAYS = 7
-
   const pageviews = await analytics.retrieveDays("pageview", TRACKING_DAYS)
-
   const totalPagesViews = pageviews.reduce((acc, curr) => {
     return (
       acc +
