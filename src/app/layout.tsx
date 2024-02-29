@@ -1,5 +1,5 @@
 import "@/styles/globals.css"
-import { absoluteUrl, cn } from "@/utils"
+import { absoluteUrl, cn } from "@/lib/utils"
 import type { Metadata, Viewport } from "next"
 
 import { ThemeProvider } from "@/components/theme-provider"

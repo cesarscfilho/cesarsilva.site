@@ -10,9 +10,10 @@ import Link from "next/link"
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
 import { siteConfig } from "@/lib/config"
 import { buttonVariants } from "../ui/button"
-import { cn } from "@/lib/utils"
+
 import { FileIcon } from "lucide-react"
 import Image from "next/image"
+import { cn } from "@/lib/utils"
 
 export const Header = () => {
   return (

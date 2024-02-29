@@ -1,17 +1,15 @@
-import { Project } from "@/components/project"
 import { buttonVariants } from "@/components/ui/button"
 import { ArrowRightIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
 import { siteConfig } from "@/lib/config"
 
 import { Work } from "@/components/work"
-import { AlertBar } from "@/components/alertbar"
 
 import { Icons } from "@/components/icons"
 import { badgeVariants } from "@/components/ui/badge"
 import { Header } from "@/components/layout/header"
 import { ProjectCard } from "@/components/cards/project-card"
-import { cn } from "@/utils"
+import { cn } from "@/lib/utils"
 
 export default async function Home() {
   return (

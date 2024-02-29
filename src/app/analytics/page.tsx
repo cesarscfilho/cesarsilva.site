@@ -1,6 +1,6 @@
 import { AnalyticsDashboard } from "@/components/analytics-dashboard"
-import { analytics } from "@/utils/analytics"
-import { getDate } from "@/utils"
+import { analytics } from "@/lib/analytics"
+import { getDate } from "@/lib/utils"
 
 export default async function AnalyticsPage() {
   const TRACKING_DAYS = 7

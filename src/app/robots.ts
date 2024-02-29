@@ -1,4 +1,4 @@
-import { absoluteUrl } from "@/utils"
+import { absoluteUrl } from "@/lib/utils"
 import { type MetadataRoute } from "next"
 
 export default function robots(): MetadataRoute.Robots {
