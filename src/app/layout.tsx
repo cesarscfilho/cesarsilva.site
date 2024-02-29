@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { fontSans } from "@/lib/fonts"
 import { siteConfig } from "@/lib/config"
 import { env } from "@/env.mjs"
+import { Shell } from "@/components/shells/shell"
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
@@ -70,9 +71,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="grid items-center gap-2 pb-8 pt-6 md:py-8 mx-auto max-w-3xl p-4">
+          <Shell as="main" variant="main">
             {children}
-          </main>
+          </Shell>
         </ThemeProvider>
       </body>
     </html>

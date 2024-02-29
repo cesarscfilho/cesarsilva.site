@@ -1,4 +1,5 @@
 import { Project } from "@/types/project"
+import { Work } from "@/types/work"
 
 export const siteConfig = {
   name: "cesarsilva",
@@ -57,5 +58,5 @@ export const siteConfig = {
         "Uma empresa de marketing digital onde eu era responsavél por fazer manutenção e melhorias no site em PHP/Wordpress.",
       time: "2022 - 6 meses",
     },
-  ],
+  ] satisfies Work[],
 }

@@ -14,10 +14,14 @@ import { buttonVariants } from "../ui/button"
 import { FileIcon } from "lucide-react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
+import { Shell } from "../shells/shell"
 
 export const Header = () => {
   return (
-    <header className="flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0 w-full max-w-3xl">
+    <Shell
+      as="header"
+      className="flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0 w-full max-w-3xl"
+    >
       <div className="flex flex-row items-center space-x-3">
         <Image
           src={siteConfig.image}
@@ -85,6 +89,6 @@ export const Header = () => {
         </TooltipProvider>
         <ModeToggle />
       </div>
-    </header>
+    </Shell>
   )
 }
