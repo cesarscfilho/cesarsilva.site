@@ -1,6 +1,5 @@
 import { projects } from "./projects"
 import { works } from "./works"
-import { metadata } from "./metadata"
 
 const links = {
   linkedin: "https://www.linkedin.com/in/cesar-silva-950126232/",
@@ -10,12 +9,12 @@ const links = {
 }
 
 export const CONFIG = {
-  name: "cesarsilva",
+  name: "Cesar Silva",
   title: "Desenvolvedor",
   description: "Site pessoal de Cesar Silva, construído com Next.js.",
   image: "https://github.com/cesarscfilho.png",
+  url: "https://www.cesarsilva.site/",
   links,
-  metadata,
   projects,
   works,
 }

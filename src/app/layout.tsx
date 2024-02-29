@@ -1,37 +1,35 @@
 import "@/styles/globals.css"
-import { absoluteUrl, cn } from "@/lib/utils"
+import { cn } from "@/lib/utils"
 import type { Metadata, Viewport } from "next"
 
 import { ThemeProvider } from "@/components/theme-provider"
 import { fontSans } from "@/lib/fonts"
-import { CONFIG } from "@/config"
-import { env } from "@/env.mjs"
 import { Shell } from "@/components/shells/shell"
+import { CONFIG } from "@/config"
 
 export const metadata: Metadata = {
-  metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
-  title: CONFIG.title,
-  description: CONFIG.metadata.description,
+  metadataBase: new URL(CONFIG.url),
+  title: { default: CONFIG.name, template: `%s | ${CONFIG.name}` },
+  description: CONFIG.description,
   keywords: ["nextjs", "react", "react server components", "cesar silva"],
   authors: [
     {
       name: CONFIG.name,
-      url: CONFIG.metadata.url,
+      url: CONFIG.url,
     },
   ],
   creator: CONFIG.name,
   openGraph: {
     type: "website",
     locale: "pt-BR",
-    url: CONFIG.metadata.url,
+    url: CONFIG.url,
     title: CONFIG.name,
-    description: CONFIG.metadata.description,
+    description: CONFIG.description,
     siteName: CONFIG.name,
   },
   icons: {
     icon: "/favicon.ico",
   },
-  manifest: absoluteUrl("/site.webmanifest"),
 }
 
 export const viewport: Viewport = {
