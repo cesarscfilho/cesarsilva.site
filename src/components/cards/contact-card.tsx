@@ -5,12 +5,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { buttonVariants } from "./ui/button"
+import { buttonVariants } from "../ui/button"
 import { AlertCircle } from "lucide-react"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 
-export function AlertBar() {
+export function ContactCard() {
   return (
     <Card className="border-destructive bg-destructive/20 pt-6">
       <CardHeader className="pt-1">

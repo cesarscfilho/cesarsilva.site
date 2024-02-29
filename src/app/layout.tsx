@@ -4,32 +4,29 @@ import type { Metadata, Viewport } from "next"
 
 import { ThemeProvider } from "@/components/theme-provider"
 import { fontSans } from "@/lib/fonts"
-import { siteConfig } from "@/lib/config"
+import { CONFIG } from "@/config"
 import { env } from "@/env.mjs"
 import { Shell } from "@/components/shells/shell"
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
+  title: CONFIG.title,
+  description: CONFIG.metadata.description,
   keywords: ["nextjs", "react", "react server components", "cesar silva"],
   authors: [
     {
-      name: siteConfig.name,
-      url: siteConfig.url,
+      name: CONFIG.name,
+      url: CONFIG.metadata.url,
     },
   ],
-  creator: siteConfig.name,
+  creator: CONFIG.name,
   openGraph: {
     type: "website",
     locale: "pt-BR",
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
+    url: CONFIG.metadata.url,
+    title: CONFIG.name,
+    description: CONFIG.metadata.description,
+    siteName: CONFIG.name,
   },
   icons: {
     icon: "/favicon.ico",

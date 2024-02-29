@@ -1,7 +1,7 @@
 import { buttonVariants } from "@/components/ui/button"
 import { ArrowRightIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
-import { siteConfig } from "@/lib/config"
+import { CONFIG } from "@/config"
 
 import { badgeVariants } from "@/components/ui/badge"
 import { Header } from "@/components/layout/header"
@@ -47,11 +47,11 @@ export default async function Home() {
       <Shell className="space-y-4">
         <Heading as="h3" size="h3" label="Projetos" />
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          {siteConfig.projects.map((project, i) => {
+          {CONFIG.projects.map((project, i) => {
             return <ProjectCard key={i} project={project} />
           })}
 
-          {siteConfig.projects.length === 0 && (
+          {CONFIG.projects.length === 0 && (
             <h1 className="text-gray-500">No projects...</h1>
           )}
         </div>
@@ -74,7 +74,7 @@ export default async function Home() {
       <Shell className="space-y-4 pb-16">
         <Heading as="h3" size="h3" label="Experiências" />
         <div className="flex flex-col space-y-7">
-          {siteConfig.works.map((work, i) => (
+          {CONFIG.works.map((work, i) => (
             <WorkCard key={work.title} work={work} />
           ))}
         </div>

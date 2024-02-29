@@ -8,13 +8,14 @@ import {
 import { ModeToggle } from "@/components/theme-toggle"
 import Link from "next/link"
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
-import { siteConfig } from "@/lib/config"
 import { buttonVariants } from "../ui/button"
 
 import { FileIcon } from "lucide-react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { Shell } from "../shells/shell"
+import { CONFIG } from "@/config"
+import React from "react"
 
 export const Header = () => {
   return (
@@ -23,16 +24,20 @@ export const Header = () => {
       className="flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0 w-full max-w-3xl"
     >
       <div className="flex flex-row items-center space-x-3">
-        <Image
-          src={siteConfig.image}
-          alt="Github profile image"
-          width={100}
-          height={100}
-          className="rounded-full h-[48px] w-[48px]"
-        />
+        <React.Suspense
+          fallback={<div className="rounded-full h-[48px] w-[48px] bg-muted" />}
+        >
+          <Image
+            src={CONFIG.image}
+            alt="Github profile image"
+            width={100}
+            height={100}
+            className="rounded-full h-[48px] w-[48px]"
+          />
+        </React.Suspense>
         <div className="flex flex-col">
-          <span className="font-semibold">Cesar Silva</span>
-          <span className="text-muted-foreground">Desenvolvedor</span>
+          <span className="font-semibold">{CONFIG.name}</span>
+          <span className="text-muted-foreground">{CONFIG.title}</span>
         </div>
       </div>
       <div className="flex flex-row items-center gap-4 self-start">
@@ -41,7 +46,7 @@ export const Header = () => {
             <TooltipTrigger asChild>
               <Link
                 target="_blank"
-                href={siteConfig.links.linkedin}
+                href={CONFIG.links.linkedin}
                 className={cn(
                   buttonVariants({ variant: "outline", size: "icon" })
                 )}
@@ -58,7 +63,7 @@ export const Header = () => {
             <TooltipTrigger asChild>
               <Link
                 target="_blank"
-                href={siteConfig.links.github}
+                href={CONFIG.links.github}
                 className={cn(
                   buttonVariants({ variant: "outline", size: "icon" })
                 )}
@@ -75,7 +80,7 @@ export const Header = () => {
             <TooltipTrigger asChild>
               <Link
                 target="_blank"
-                href={siteConfig.links.resumeDowload}
+                href={CONFIG.links.resumeDowload}
                 className={cn(
                   buttonVariants({ variant: "outline", size: "icon" })
                 )}
