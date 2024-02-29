@@ -51,6 +51,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
+      <head>
+        <script
+          src="https://beamanalytics.b-cdn.net/beam.min.js"
+          data-token="b64f83a8-e087-40b1-905a-407d83f47885"
+          async
+        ></script>
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
