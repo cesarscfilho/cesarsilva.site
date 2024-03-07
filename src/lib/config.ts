@@ -43,14 +43,6 @@ export const siteConfig = {
       },
       language: "TypeScript",
     },
-    // {
-    //   title: "TheStore",
-    //   description: "This is an open source project for a store product manager build with everything new in Next.js 13.",
-    //   links: {
-    //     url: "https://thestore-tau.vercel.app/",
-    //     urlGithub: "https://github.com/cesarsdcf/thestore"
-    //   }
-    // },
   ] satisfies Project[],
   works: [
     {

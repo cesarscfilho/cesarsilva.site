@@ -33,7 +33,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  manifest: absoluteUrl("/site.webmanifest"),
 }
 
 export const viewport: Viewport = {
