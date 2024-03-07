@@ -1,6 +1,6 @@
 import { redis } from "@/lib/redis"
 
-import { getDate } from "@/utils"
+import { getDate } from "@/lib/utils"
 import { parse } from "date-fns"
 
 type AnalyticsArgs = {

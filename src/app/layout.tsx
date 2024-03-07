@@ -1,34 +1,31 @@
-import { absoluteUrl, cn } from "@/lib/utils"
-import "./globals.css"
+import "@/styles/globals.css"
+import { cn } from "@/lib/utils"
 import type { Metadata, Viewport } from "next"
 
 import { ThemeProvider } from "@/components/theme-provider"
 import { fontSans } from "@/lib/fonts"
-import { siteConfig } from "@/lib/config"
-import { env } from "@/env.mjs"
+import { Shell } from "@/components/shells/shell"
+import { CONFIG } from "@/config"
 
 export const metadata: Metadata = {
-  metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
+  metadataBase: new URL(CONFIG.url),
+  title: { default: CONFIG.name, template: `%s | ${CONFIG.name}` },
+  description: CONFIG.description,
   keywords: ["nextjs", "react", "react server components", "cesar silva"],
   authors: [
     {
-      name: siteConfig.name,
-      url: siteConfig.url,
+      name: CONFIG.name,
+      url: CONFIG.url,
     },
   ],
-  creator: siteConfig.name,
+  creator: CONFIG.name,
   openGraph: {
     type: "website",
     locale: "pt-BR",
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
+    url: CONFIG.url,
+    title: CONFIG.name,
+    description: CONFIG.description,
+    siteName: CONFIG.name,
   },
   icons: {
     icon: "/favicon.ico",
@@ -69,9 +66,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="grid items-center gap-2 pb-8 pt-6 md:py-8 mx-auto max-w-3xl p-4">
+          <Shell as="main" variant="main">
             {children}
-          </main>
+          </Shell>
         </ThemeProvider>
       </body>
     </html>
