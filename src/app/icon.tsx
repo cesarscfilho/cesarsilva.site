@@ -19,6 +19,7 @@ export default function Icon() {
         style={{
           fontSize: 24,
           background: "black",
+          fontWeight: "bolder",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -27,7 +28,7 @@ export default function Icon() {
           color: "white",
         }}
       >
-        CS
+        C
       </div>
     ),
     // ImageResponse options

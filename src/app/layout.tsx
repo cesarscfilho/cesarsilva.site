@@ -1,39 +1,36 @@
-import { absoluteUrl, cn } from "@/lib/utils"
-import "./globals.css"
+import "@/styles/globals.css"
+
+import { cn } from "@/lib/utils"
 import type { Metadata, Viewport } from "next"
 
 import { ThemeProvider } from "@/components/theme-provider"
 import { fontSans } from "@/lib/fonts"
-import { siteConfig } from "@/lib/config"
-import { env } from "@/env.mjs"
+import { Shell } from "@/components/shells/shell"
+import { CONFIG } from "@/config"
 
 export const metadata: Metadata = {
-  metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
+  metadataBase: new URL(CONFIG.url),
+  title: { default: CONFIG.name, template: `%s | ${CONFIG.name}` },
+  description: CONFIG.description,
   keywords: ["nextjs", "react", "react server components", "cesar silva"],
   authors: [
     {
-      name: "cesarsilva",
-      url: "https://www.cesarsilva.site/",
+      name: CONFIG.name,
+      url: CONFIG.url,
     },
   ],
-  creator: "cesarsilva",
+  creator: CONFIG.name,
   openGraph: {
     type: "website",
     locale: "pt-BR",
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
+    url: CONFIG.url,
+    title: CONFIG.name,
+    description: CONFIG.description,
+    siteName: CONFIG.name,
   },
   icons: {
     icon: "/favicon.ico",
   },
-  manifest: absoluteUrl("/site.webmanifest"),
 }
 
 export const viewport: Viewport = {
@@ -43,13 +40,21 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
 }
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
+      <head>
+        <script
+          src="https://beamanalytics.b-cdn.net/beam.min.js"
+          data-token="b64f83a8-e087-40b1-905a-407d83f47885"
+          async
+        ></script>
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
@@ -62,7 +67,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Shell as="main" variant="main">
+            {children}
+          </Shell>
         </ThemeProvider>
       </body>
     </html>

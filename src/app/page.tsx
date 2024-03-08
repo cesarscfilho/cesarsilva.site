@@ -1,23 +1,21 @@
-import { Project } from "@/components/project"
 import { buttonVariants } from "@/components/ui/button"
 import { ArrowRightIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
-import { cn } from "@/lib/utils"
-import { siteConfig } from "@/lib/config"
+import { CONFIG } from "@/config"
 
-import { Work } from "@/components/work"
-import { AlertBar } from "@/components/alertbar"
-
-import { Icons } from "@/components/icons"
 import { badgeVariants } from "@/components/ui/badge"
-import { Header } from "@/components/header"
-import { MenupLogo } from "@/components/menup-logo"
+import { Header } from "@/components/layout/header"
+import { ProjectCard } from "@/components/cards/project-card"
+import { cn } from "@/lib/utils"
+import { Shell } from "@/components/shells/shell"
+import { Heading } from "@/components/heading"
+import { WorkCard } from "@/components/cards/work-card"
 
 export default async function Home() {
   return (
-    <main className="container max-w-3xl py-3 md:py-4">
+    <>
       <Header />
-      <section className="prose prose-neutral dark:prose-invert my-6">
+      <Shell>
         <div className="prose prose-neutral dark:prose-invert">
           <p>
             Sou <span className="font-bold">Cesar Silva</span>, desenvolvedor
@@ -44,35 +42,26 @@ export default async function Home() {
             recentes do NextJs.
           </p>
         </div>
-      </section>
-      <AlertBar />
-      <section className="mt-6">
-        <h2 className="text-2xl font-bold mb-5 flex items-center">Projetos</h2>
-        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          {siteConfig.projects.map((project, i) => {
-            const logo = project.logo ?? "logoempty"
-            return (
-              <Project
-                key={i}
-                logo={logo}
-                title={project.title}
-                description={project.description}
-                links={project.links}
-              />
-            )
+      </Shell>
+
+      <Shell className="space-y-4">
+        <Heading as="h3" size="h3" label="Projetos" />
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          {CONFIG.projects.map((project, i) => {
+            return <ProjectCard key={i} project={project} />
           })}
 
-          {siteConfig.projects.length === 0 && (
+          {CONFIG.projects.length === 0 && (
             <h1 className="text-gray-500">No projects...</h1>
           )}
-        </ul>
+        </div>
         <Link
           href="https://github.com/cesarscfilho"
           target="_blank"
           className={cn(
             buttonVariants({
               variant: "link",
-              className: "mx-auto flex w-fit mt-3",
+              className: "ml-auto flex w-fit mt-3",
             })
           )}
         >
@@ -80,22 +69,16 @@ export default async function Home() {
           <ArrowRightIcon className="ml-2 h-4 w-4" aria-hidden="true" />
           <span className="sr-only">Ver mais</span>
         </Link>
-      </section>
-      <section className="my-8">
-        <h2 className="text-2xl font-bold mb-5 flex items-center">
-          <Icons.works className="h-7 w-7 mr-2" /> Experiências
-        </h2>
-        <ul className="flex flex-col space-y-7">
-          {siteConfig.works.map((work, i) => (
-            <Work
-              key={work.title}
-              title={work.title}
-              description={work.description}
-              time={work.time}
-            />
+      </Shell>
+
+      <Shell className="space-y-4 pb-16">
+        <Heading as="h3" size="h3" label="Experiências" />
+        <div className="flex flex-col space-y-7">
+          {CONFIG.works.map((work, i) => (
+            <WorkCard key={work.title} work={work} />
           ))}
-        </ul>
-      </section>
-    </main>
+        </div>
+      </Shell>
+    </>
   )
 }

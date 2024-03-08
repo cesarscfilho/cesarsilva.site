@@ -80,6 +80,7 @@ module.exports = {
     current: "currentColor",
 
     // Tremor theme
+
     colors: {
       // light mode
       tremor: {
