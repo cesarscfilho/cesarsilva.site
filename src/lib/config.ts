@@ -15,6 +15,7 @@ export const siteConfig = {
   url: "https://www.cesarsilva.site",
   projects: [
     {
+      logo: "menuplogo",
       title: "Menup",
       description: "Entrega de comida on-line sem esforço ao seu alcance.",
       links: {
