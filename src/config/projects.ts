@@ -1,15 +1,15 @@
 import { Project } from "@/types/project"
 
 export const projects = [
-  {
-    title: "Menup",
-    description: "Entrega de comida on-line sem esforço ao seu alcance.",
-    links: {
-      urlGithub: "https://github.com/cesarscfilho/menup-v1",
-      url: "https://menup-navy.vercel.app/",
-    },
-    language: "TypeScript",
-  },
+  // {
+  //   title: "Menup",
+  //   description: "Entrega de comida on-line sem esforço ao seu alcance.",
+  //   links: {
+  //     urlGithub: "https://github.com/cesarscfilho/menup-v1",
+  //     url: "https://menup-navy.vercel.app/",
+  //   },
+  //   language: "TypeScript",
+  // },
   {
     title: "Sneakers",
     description:

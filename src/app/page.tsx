@@ -26,7 +26,7 @@ export default async function Home() {
             Minhas principais techs incluem ReactJS, React Native/Expo, NextJs,
             Prisma/Drizzle, TypeScript, TailwindCss e Styled Components.
           </p>
-          <p>
+          {/* <p>
             Atualmente estou construindo um projeto open-source chamado{" "}
             <Link
               target="_blank"
@@ -40,7 +40,7 @@ export default async function Home() {
             </Link>
             , uma plataforma de cardapio online construída com os recursos mais
             recentes do NextJs.
-          </p>
+          </p> */}
         </div>
       </Shell>
 
